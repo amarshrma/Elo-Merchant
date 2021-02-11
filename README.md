@@ -1,5 +1,4 @@
 # Elo-Merchant
-# Elo-Merchant
 Elo, is one of the largest payments brands in brazil, which wants to predict a loyalty score for each of its customer.
 This is a kaggle competition which can be accessed by [this](https://www.kaggle.com/c/elo-merchant-category-recommendation) link.
 This repository contains solutions related to the competition. Loyalty score which is predicted for each of its customer, indicates how useful are the services of Elo to that particular customer. By doing so, it can focus more on those loyal customers and also serve them better.
