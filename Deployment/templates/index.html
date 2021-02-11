@@ -1,0 +1,82 @@
+<html>
+<style>
+#userData th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  color: navy;
+}
+
+#userData {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+}
+
+#userData td, #userData th {
+  border: 1px solid black;
+  padding: 8px;
+}
+</style>
+<body>
+    <h3 style="color: navy;">Elo Merchant Category Recommendation</h3>
+
+<div>
+  <form action="/predict" method="POST">
+  <div style = "height: 557px;border: black;width: 1350px;background-color: powderblue;">
+  <table style = "width:100%" id="userData">
+	<tr>
+		<th> Card Ids </th>
+		<th> First Active Month </th>
+		<th> Feature 1 </th>
+		<th> Feature 2 </th>
+		<th> Feature 3 </th>
+		<th style="background: white;border: none;"></th>
+	</tr>
+	<tr>
+		<td>
+			<div style="overflow-y: auto;height: 504px;">
+				{% for card in cards %}
+				<input type="radio" name="card_id" value="{{ card }}"/>
+				{{card}}
+				</br>
+				{% endfor %}
+			<div>
+			
+		</td>
+		<td style="vertical-align: top;">
+			<input type="date" id="firstactivemonth" name="firstactivemonth">
+		</td >
+		<td style="vertical-align: top;">
+			{% for f in feature_1 %}
+			<input type="radio" name="feature_1" value="{{ f }}"/>
+			{{f}}
+			</br>
+			{% endfor %}
+		</td>
+		<td style="vertical-align: top;">
+			{% for f in feature_2 %}
+			<input type="radio" name="feature_2" value="{{ f }}"/>
+			{{f}}
+			</br>
+			{% endfor %}
+		</td>
+		<td style="vertical-align: top;">
+			{% for f in feature_3 %}
+			<input type="radio" name="feature_3" value="{{ f }}"/>
+			{{f}}
+			</br>
+			{% endfor %}
+		</td>
+		<td style="background: white;border: none;">
+		<input style="width: 70px;height: 25px;" type="submit" value="Submit">
+		</td>
+	<tr>
+  </table>
+	
+  </div>
+  
+  </form>
+  
+</div>
+</body>
+</html>
